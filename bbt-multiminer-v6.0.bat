@@ -290,7 +290,7 @@ pause
 
 :ethereum2
 ECHO AMD and NVIDIA Claymore 11.6 - Eth Only Nanopool.org
-Miners\Claymore_ETH_Miner_v11.6\EthDcrMiner64.exe -epool eth-us-east1.nanopool.org:9999 -ewal %ETC_WALLET_ADDRESS%/%MINER_NAME%/%EMAIL_ADDRESS% -epsw %WORKER_PASSWORD%
+Miners\Claymore_ETH_Miner_v11.6\EthDcrMiner64.exe -epool eth-us-east1.nanopool.org:9999 -ewal %ETH_WALLET_ADDRESS%/%MINER_NAME%/%EMAIL_ADDRESS% -epsw %WORKER_PASSWORD%
 if %ERRORLEVEL% NEQ 0 goto exit
 pause
 
@@ -300,7 +300,7 @@ pause
 
 :ethereumc1
 ECHO AMD and NVIDIA Claymore 11.6 - Etc (ethereum classic) etc.ethermine.org
-Miners\Claymore_ETH_Miner_v11.6\EthDcrMiner64.exe -epool us1-etc.ethermine.org:4444 -ewal %ETH_WALLET_ADDRESS%.%MINER_NAME% -epsw %WORKER_PASSWORD% -mode 1 -allpools 1 
+Miners\Claymore_ETH_Miner_v11.6\EthDcrMiner64.exe -epool us1-etc.ethermine.org:4444 -ewal %ETC_WALLET_ADDRESS%.%MINER_NAME% -epsw %WORKER_PASSWORD% -mode 1 -allpools 1 
 if %ERRORLEVEL% NEQ 0 goto exit
 pause
 
