@@ -555,19 +555,19 @@ pause
 
 :monero1
 ECHO XMRig 2.5.2 NVIDIA - XMR to Nanopool
-Miners\cryptonight\XMR\xmrig-NVIDIA-2.5.2-Win64\xmrig-nvidia -o xmr-us-east1.nanopool.org:14444 -u %XMR_WALLET_ADDRESS%.%MINER-NAME%.%EMAIL-ADDRESS% -p %EMAIL-ADDRESS% --variant 1 -k
+Miners\cryptonight\XMR\xmrig-NVIDIA-2.5.2-Win64\xmrig-nvidia -o xmr-us-east1.nanopool.org:14444 -u %XMR_WALLET_ADDRESS%.%MINER-NAME% -p %WORKER_PASSWORD% --variant 1 -k
 if %ERRORLEVEL% NEQ 0 goto exit
 pause
 
 :monero2
 ECHO XMRig 2.5.2 AMD - XMR to Nanopool
-Miners\cryptonight\XMR\xmrig-AMD-2.5.2-Win64\xmrig-amd -o xmr-us-east1.nanopool.org:14444 -u %XMR_WALLET_ADDRESS%.%MINER-NAME%.%EMAIL-ADDRESS% -p %WORKER_PASSWORD% --variant 1 -k
+Miners\cryptonight\XMR\xmrig-AMD-2.5.2-Win64\xmrig-amd -o xmr-us-east1.nanopool.org:14444 -u %XMR_WALLET_ADDRESS%.%MINER-NAME% -p %WORKER_PASSWORD% --variant 1 -k
 if %ERRORLEVEL% NEQ 0 goto exit
 pause
 
 :monero3
 ECHO CAST XMR Vega 0.9.2 - XMR to Nanopool for RX VEGA
-Miners\cast_xmr-vega-win64_092\cast_xmr-vega -S xmr-us-east1.nanopool.org:14444 -u %XMR_WALLET_ADDRESS%.%MINER_NAME%.%EMAIL-ADDRESS% -p %WORKER_PASSWORD% --nonicehash --fastjobswitch -I 9
+Miners\cast_xmr-vega-win64_092\cast_xmr-vega -S xmr-us-east1.nanopool.org:14444 -u %XMR_WALLET_ADDRESS%.%MINER_NAME% -p %WORKER_PASSWORD% --nonicehash --fastjobswitch -I 9
 if %ERRORLEVEL% NEQ 0 goto exit
 pause
 
