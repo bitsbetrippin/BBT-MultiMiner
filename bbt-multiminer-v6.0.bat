@@ -555,19 +555,19 @@ pause
 
 :monero1
 ECHO XMRig 2.5.2 NVIDIA - XMR to Nanopool
-Miners\cryptonight\XMR\xmrig-NVIDIA
+Miners\cryptonight\XMR\xmrig-NVIDIA-2.5.2-Win64\xmrig-nvidia -o xmr-us-east1.nanopool.org:14444 -u %XMR_WALLET_ADDRESS%.%MINER-NAME% -p %WORKER_PASSWORD% --variant 1 -k
 if %ERRORLEVEL% NEQ 0 goto exit
 pause
 
 :monero2
 ECHO XMRig 2.5.2 AMD - XMR to Nanopool
-Miners\cryptonight\XMR\xmrig-AMD
+Miners\cryptonight\XMR\xmrig-AMD-2.5.2-Win64\xmrig-amd -o xmr-us-east1.nanopool.org:14444 -u %XMR_WALLET_ADDRESS%.%MINER-NAME% -p %WORKER_PASSWORD% --variant 1 -k
 if %ERRORLEVEL% NEQ 0 goto exit
 pause
 
 :monero3
 ECHO CAST XMR Vega 0.9.2 - XMR to Nanopool for RX VEGA
-Miners\cast_xmr-vega-win64_092\cast_xmr-vega -S xmr-us-east1.nanopool.org:14444 -u %XMR_WALLET_ADDRESS%.%MINER_NAME% %*
+Miners\cast_xmr-vega-win64_092\cast_xmr-vega -S xmr-us-east1.nanopool.org:14444 -u %XMR_WALLET_ADDRESS%.%MINER_NAME% -p %WORKER_PASSWORD% --nonicehash --fastjobswitch -I 9
 if %ERRORLEVEL% NEQ 0 goto exit
 pause
 
@@ -658,7 +658,7 @@ pause
 
 :rvn1
 ECHO Brians SGMinger AMD 0.4.0 - RavenCoin to Threeyed
-Miners\sgminer-x16r-v0.4.0-windows\sgminer.exe -k x16r -o stratum+tcp://stratum.threeeyed.info:3333 -u %RVN_WALLET_ADDRESS% -p %WORKER_PASSWORD% -i %I% 
+Miners\sgminer-x16r-v0.4.0-windows\sgminer.exe -k x16r -o stratum+tcp://stratum.threeeyed.info:3333 -u %RVN_WALLET_ADDRESS% -p %WORKER_PASSWORD% -I %I% 
 if %ERRORLEVEL% NEQ 0 goto exit
 pause
 
