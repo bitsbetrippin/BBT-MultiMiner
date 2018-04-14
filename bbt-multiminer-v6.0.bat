@@ -284,13 +284,13 @@ IF %M% GTR 61 GOTO EOF
 
 :ethereum1
 ECHO AMD and NVIDIA Claymore 11.6 - Eth Only Ethermine.org
-Miners\Claymore_ETH_Miner_v11.6\EthDcrMiner64.exe -epool us1.ethermine.org:4444 -ewal %ETH_WALLET_ADDRESS%.%MINER_NAME% -epsw %WORKER_PASSWORD%
+Miners\Claymore_ETH_Miner_v11.6\EthDcrMiner64.exe -epool us1.ethermine.org:4444 -ewal %ETH_WALLET_ADDRESS%.%MINER_NAME% -epsw %WORKER_PASSWORD% -mode 1 -allpools 1
 if %ERRORLEVEL% NEQ 0 goto exit
 pause
 
 :ethereum2
 ECHO AMD and NVIDIA Claymore 11.6 - Eth Only Nanopool.org
-Miners\Claymore_ETH_Miner_v11.6\EthDcrMiner64.exe -epool eth-us-east1.nanopool.org:9999 -ewal %ETH_WALLET_ADDRESS%/%MINER_NAME%/%EMAIL_ADDRESS% -epsw %WORKER_PASSWORD%
+Miners\Claymore_ETH_Miner_v11.6\EthDcrMiner64.exe -epool eth-us-east1.nanopool.org:9999 -ewal %ETH_WALLET_ADDRESS%/%MINER_NAME%/%EMAIL_ADDRESS% -epsw %WORKER_PASSWORD% -mode 1 -allpools 1
 if %ERRORLEVEL% NEQ 0 goto exit
 pause
 
@@ -657,26 +657,26 @@ pause
 ::
 
 :rvn1
-ECHO Brians SGMinger AMD 0.4.0 - RavenCoin to Threeyed
-Miners\sgminer-x16r-v0.4.0-windows\sgminer.exe -k x16r -o stratum+tcp://stratum.threeeyed.info:3333 -u %RVN_WALLET_ADDRESS% -p %WORKER_PASSWORD% -i %I% 
+ECHO Brians SGMinger AMD 0.4.0 - RavenCoin to Suprnova
+Miners\sgminer-x16r-amd\sgminer.exe -k x16r -o stratum+tcp://rvn.suprnova.cc:6666 -u %MINER_WEBLOGIN%.%MINER_NAME% -p %WORKER_PASSWORD% -I %I% 
 if %ERRORLEVEL% NEQ 0 goto exit
 pause
 
 :rvn2
-ECHO Nevermore 0.2.2 - Nvidia Only - RavenCoin to Threeyed
-Miners\nevermore-v0.2.2-win64\ccminer -a x16r -o stratum+tcp://stratum.threeeyed.info:3333 -u %RVN_WALLET_ADDRESS% -p %WORKER_PASSWORD% -i %I% 
+ECHO Nevermore 0.2.2 - Nvidia Only - RavenCoin to Suprnova
+Miners\nevermore-v0.2.2-win64\ccminer -a x16r -o stratum+tcp://rvn.suprnova.cc:6666 -u %RVN_WALLET_ADDRESS% -p %WORKER_PASSWORD% -i %I% 
 if %ERRORLEVEL% NEQ 0 goto exit
 pause
 
 :rvn3
-ECHO Enemy 1.3.0 - Nvidia Only - RavenCoin to Threeyed
-Miners\Enemy-ccminer.1.3.0\ccminer -a x16r -o stratum+tcp://stratum.threeeyed.info:3333 -u %RVN_WALLET_ADDRESS% -p %WORKER_PASSWORD% -i %I% 
+ECHO Enemy 1.3.0 - Nvidia Only - RavenCoin to Suprnova
+Miners\Enemy-ccminer.1.3.0\ccminer -a x16r -o stratum+tcp://rvn.suprnova.cc:6666 -u %RVN_WALLET_ADDRESS% -p %WORKER_PASSWORD% -i %I% 
 if %ERRORLEVEL% NEQ 0 goto exit
 pause
 
 :rvn4
-ECHO Suprminer 1.6.0 - Nvidia Only - RavenCoin to Threeyed
-Miners\suprminer-1.6\ccminer -a x16r -o stratum+tcp://stratum.threeeyed.info:3333 -u %RVN_WALLET_ADDRESS% -p %WORKER_PASSWORD% -i %I% 
+ECHO Suprminer 1.6.0 - Nvidia Only - RavenCoin to Suprnova
+Miners\suprminer-1.6\ccminer -a x16r -o stratum+tcp://rvn.suprnova.cc:6666 -u %RVN_WALLET_ADDRESS% -p %WORKER_PASSWORD% -i %I% 
 if %ERRORLEVEL% NEQ 0 goto exit
 pause
 
